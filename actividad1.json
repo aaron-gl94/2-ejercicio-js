@@ -1,0 +1,8 @@
+{
+    "name": "Example",
+    "lasname": "JSON",
+    "age": 28,
+    "email": "email@example.com",
+    "username": "aaron.garcia.94",
+    "courses": ["JavaScript: 1", "JavaScript: 2", "JavaScript: 3"]
+}

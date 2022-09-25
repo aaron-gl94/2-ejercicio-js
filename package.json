@@ -1,0 +1,30 @@
+{
+  "name": "2-ejercicio-objproto",
+  "version": "1.0.0",
+  "description": "Manejo de objetos y prototipos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "prototype": "node index.prototype",
+    "dev": "node index.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaron-gl94/2-ejercicio-js.git"
+  },
+  "keywords": [
+    "Objetos",
+    "Prototype",
+    "Peticiones Sincronas",
+    "XHR"
+  ],
+  "author": "AGL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaron-gl94/2-ejercicio-js/issues"
+  },
+  "homepage": "https://github.com/aaron-gl94/2-ejercicio-js#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
