@@ -1,48 +1,48 @@
-// -> Define un constructor 'Robot'
-// -> Crea dos instancias de Robot: 'robby' y 'cranky'
-// -> Tanto robby como cranky deben tener 'parts' y 'capabilities', éstas deben
-//    ser arrays vacíos al inicio
+// -> Define a 'Robot' function constructor
+// -> Create two instances of Robot: 'robby' and 'cranky'
+// -> Both robby and cranky should respond to 'parts' and 'capabilities', these 
+//    should be empty arrays at first
 
 function Robot() {
-  this.parts = [];
-  this.capabilities = [];
+	this.parts = [];
 }
+
+Robot.prototype.capabilities = [];
 
 var robby = new Robot();
 var cranky = new Robot();
-// -> Haz claim del resultado de robby.parts
+
+// -> Claim the result of robby.parts
 claim(robby.parts, []);
-// -> Haz claim del resultado de cranky.parts
+// -> Claim the result of cranky.parts
 claim(cranky.parts, []);
-// -> Haz claim del resultado de robby.capabilities
+// -> Claim the result of robby.capabilities
 claim(robby.capabilities, []);
-// -> Haz claim del resultado de cranky.capabilities
+// -> Claim the result of cranky.capabilities
 claim(cranky.capabilities, []);
 
-// -> Añade 'core' a robby.parts, cranky.parts debería tener todavía un arreglo vacío
-// -> Añade 'fly' a robby.capabilities, después de esto cranky.capabilities debe
-//    también tener 'fly' sin añadírselo directamente, así que esta propiedad
-//    debe ser compartida.
+// -> Add 'core' to robby.parts, cranky.parts should still be empty
+// -> Add 'fly' to robby.capabilities, after doing that cranky.capabilities must 
+//    also have 'fly' without adding to it directly, so this property has to be 
+//    shared
 
 robby.parts.push('core');
-robby.capabilities.push('fly');
+cranky.capabilities.push('fly');
 
-cranky.__proto__.capabilities = robby.capabilities;
-
-// -> Haz claim del resultado de robby.parts
+// -> Claim the result of robby.parts
 claim(robby.parts, ['core']);
-// -> Haz claim del resultado de cranky.parts
+// -> Claim the result of cranky.parts
 claim(cranky.parts, []);
-// -> Haz claim del resultado de robby.capabilities
+// -> Claim the result of robby.capabilities
 claim(robby.capabilities, ['fly']);
-// -> Haz claim del resultado de cranky.capabilities
-claim(cranky.__proto__.capabilities, ['fly']);
+// -> Claim the result of cranky.capabilities
+claim(cranky.capabilities, ['fly']);
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  Robot:  Robot,
-  robby:  robby,
-  cranky: cranky
+	Robot:  Robot,
+	robby:  robby,
+	cranky: cranky
 }

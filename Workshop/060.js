@@ -1,28 +1,28 @@
-// -> Creamos un objeto llamado `machine`
-var machine = {};
+// -> Let's create an object called 'machine'
+var machine = {}
 
-// -> Usa Object.create para creae otro objeto llamado `robot` con `machine`
-//    como prototipo
+// -> Use Object.create to create another object called 'robot' with 'machine' 
+//    set as the prototype
 var robot = Object.create(machine);
 
-// -> Usa Object.create para crear otro objeto llamado `robby` con `robot`
-//    como prototipo
+// -> Use Object.create to create another object called 'robby' with 'robot' 
+//    as the prototype
 var robby = Object.create(robot);
 
-// -> Cuál es el resultado de `machine.isPrototypeOf(robby)`?
+// -> What is the result of `machine.isPrototypeOf(robby)`?
 claim(machine.isPrototypeOf(robby), true);
 
-// -> Cuál es el resultado de `robot.isPrototypeOf(robby)`?
+// -> What is the result of `robot.isPrototypeOf(robby)`?
 claim(robot.isPrototypeOf(robby), true);
 
-// -> Qué objeto es el prototipo directo de `robby`?
+// -> Which object is the direct prototype of robby?
 claim.same(Object.getPrototypeOf(robby), robot);
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  machine:  machine,
-  robot:    robot,
-  robby:    robby
+	machine:  machine,
+	robot:    robot,
+	robby:    robby
 }

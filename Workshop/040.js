@@ -1,33 +1,33 @@
-// -> Define tres objetos: 'machine', 'robot' y 'vehicle'
-//    En la definición de `machine` añade la propiedad `motors` y asígnale null.
+// -> Define three objects: 'machine', 'robot' and 'vehicle'
+//    In the definition of machine add a property 'motors' set to null.
 var machine = {
-  motors: null
+	motors: null
 };
-var vehicle = {};
 var robot = {};
+var vehicle = {};
 
-// -> Hacemos que `machine` sea el prototipo de `robot` y `vehicle`
+// -> Let's make machine the prototype of robot and vehicle
 vehicle.__proto__ = machine;
 robot.__proto__ = machine;
 
-// -> Qué son `machine.motors`, `robot.motors` y `vehicle.motors`?
+// -> What are `machine.motors`, `robot.motors` and `vehicle.motors`?
 claim(machine.motors, null);
 claim(robot.motors, null);
 claim(vehicle.motors, null);
 
-// -> Asigna `4` a `robot.motors`.
+// -> Set `robot.motors` to 4 by direct assignment
 robot.motors = 4;
 
-// -> Qué son `machine.motors`, `robot.motors` y `vehicle.motors` ahora?
+// -> What are `machine.motors`, `robot.motors` and `vehicle.motors` now?
 claim(machine.motors, null);
 claim(robot.motors, 4);
 claim(vehicle.motors, null);
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  machine:  machine,
-  vehicle:  vehicle,
-  robot:    robot
+	machine:  machine,
+	vehicle:  vehicle,
+	robot:    robot
 }

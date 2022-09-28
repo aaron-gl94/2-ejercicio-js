@@ -1,35 +1,35 @@
-// -> Crea un objeto 'machine'
-//    con una propiedad 'motors' = 4
+// -> Create a machine object
+//    with a property motors = 4
 var machine = {
-  motors: 4
+	motors: 4
 };
 
-// -> Crea un objeto robot
-//    con una propiedad 'friendly' = true
+// -> Create a robot object
+//    with a property friendly = true
 var robot = {
-  friendly: true
+	friendly: true
 };
 
-// -> Crea un objeto 'robby'
+// -> Create a robby object
 var robby = {};
 
-// -> Haz que 'machine' sea el prototipo de 'robot'
+// -> Make machine the prototype of robot
 robot.__proto__ = machine;
 
-// -> Haz que 'robot' sea el prototipo de 'robby'
+// -> Make robot the prototype of robby
 robby.__proto__ = robot;
 
-// -> Qué es `robby.motors`?
+// -> What is `robby.motors`?
 claim(robby.motors, 4);
 
-// -> Qué es `robby.friendly`?
+// -> What is `robby.friendly`?
 claim(robby.friendly, true);
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  machine: machine,
-  robot:   robot,
-  robby:   robby
+	machine: machine,
+	robot:   robot,
+	robby:   robby
 }

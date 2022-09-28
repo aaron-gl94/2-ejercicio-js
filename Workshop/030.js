@@ -1,33 +1,33 @@
-// -> Declaremos tres objetos: 'machine' 'vehicle' y 'robot'
-var machine = {};
-var vehicle = {};
-var robot = {};
+// -> Let's define three objects: 'machine' 'vehicle' and 'robot'
+var machine = {}
+var vehicle = {}
+var robot = {}
 
-// -> Haz que `machine` sea el prototipo de `vehicle`
-// -> Haz que `machine` sea el prototipo de `robot`
+// -> Make machine the prototype of vehicle
+// -> Make machine the prototype of robot
 vehicle.__proto__ = machine;
 robot.__proto__ = machine;
 
-// -> Qué es `vehicle.motors`?
+// -> What is `vehicle.motors`?
 claim(vehicle.motors, undefined);
 
-// -> Qué es `robot.motors`?
+// -> What is `robot.motors`?
 claim(robot.motors, undefined);
 
-// -> Define una propiedad `motors` en `machine` y asígnale el valor `4`
+// -> Define a 'motors' property on machine, set this to 4
 machine.motors = 4;
 
-// -> Qué es `vehicle.motors` ahora?
+// -> What is `vehicle.motors` now?
 claim(vehicle.motors, 4);
 
-// -> Qué es `robot.motors`?
+// -> What is `robot.motors`?
 claim(robot.motors, 4);
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  machine: machine,
-  vehicle: vehicle,
-  robot:   robot
+	machine: machine,
+	vehicle: vehicle,
+	robot:   robot
 }

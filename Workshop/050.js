@@ -1,54 +1,55 @@
-// -> Crea tres objetos: 'machine', 'robot' y 'vehicle'
-// -> En la definición de `machine` incluye una propiedad `parts`, y dale un
-//    array vacío como valor: `[]`
-// -> En la definición de `machine` incluye una propiedad 'capabilities', y
-//    asígnale un objeto vacío: `{}`
+// -> Create three objects: 'machine', 'robot' and 'vehicle'
+// -> In the definition of machine set a property 'parts', set it to an 
+//    empty array `[]`
+// -> In the definition of machine set a property 'capabilities', set it to 
+//    an empty object `{}`
+
 var machine = {
-  parts: [],
-  capabilities: {}
+	parts: [],
+	capabilities: {}
 };
 var robot = {};
 var vehicle = {};
 
-// -> Hagamos que el prototipo de tanto `robot` como `vehicle` sea `machine`
+// -> Let's set the prototype of both robot and vehicle to machine
 robot.__proto__ = machine;
 vehicle.__proto__ = machine;
 
-// -> Qué es `robot.parts`?
+// -> What is `robot.parts`?
 claim(robot.parts, []);
 
-// -> Qué es `vehicle.parts`?
+// -> What is `vehicle.parts`?
 claim(vehicle.parts, []);
 
-// -> Qué es `robot.capabilities`?
+// -> What is `robot.capabilities`?
 claim(robot.capabilities, {});
 
-// -> Qué es `vehicle.capabilities`?
+// -> What is `vehicle.capabilities`?
 claim(vehicle.capabilities, {});
 
-// -> Añadamos 'core' a `parts` del robot
-robot.parts.push(['core']);
+// -> Let's add a 'core' part to robot
+robot.parts.push('core');
 
-// -> Qué es `robot.parts` ahora?
-claim(robot.parts[0], ['core']);
+// -> What is `robot.parts` now?
+claim(robot.parts, ['core']);
 
-// -> Qué es `vehicle.parts` ahora?
-claim(vehicle.parts[0], ['core']);
+// -> What is `vehicle.parts` now?
+claim(vehicle.parts, ['core']);
 
-// -> Démosle una habilidad al vehículo...
+// -> Let's set an ability to vehicle
 vehicle.capabilities.fly = true;
 
-// -> Qué es `robot.capabilities` ahora?
-claim(vehicle.capabilities, {fly: true});
+// -> What is `robot.capabilities` now?
+claim(robot.capabilities, {'fly': true});
 
-// -> Qué es `vehicle.capabilities` ahora?
-claim(vehicle.capabilities, {fly: true});
+// -> What is `vehicle.capabilities` now?
+claim(vehicle.capabilities, {'fly': true});
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  machine: machine,
-  vehicle: vehicle,
-  robot:   robot
+	machine: machine,
+	vehicle:    vehicle,
+	robot:    robot
 }

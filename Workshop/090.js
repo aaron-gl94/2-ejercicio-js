@@ -1,20 +1,21 @@
-// -> Define dos constructores: 'Robot' y 'Vehicle'
-// -> Cuando `Robot` se invoque con 'new' debe retornar el 'this' implícito
-// -> Cuando `Vehicle` se invoque con 'new', debe retornar un objeto cualquiera,
-//    no el 'this' implícito.
+// -> Define two constructor functions: 'Robot' and 'Vehicle'
+// -> When called with 'new', the Robot constructor function should return 
+//    the implicit 'this'
+// -> When called with 'new', the Vehicle constructor function should return 
+//    an object of your own making, not the implicit 'this'.
 
 function Robot() {
-  return this;
+	return this;
 }
 
 function Vehicle() {
-  return {};
+	return {};
 }
 
 
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  Robot:   Robot,
-  Vehicle: Vehicle
+	Robot:    Robot,
+	Vehicle:  Vehicle
 }

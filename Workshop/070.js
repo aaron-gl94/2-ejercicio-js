@@ -1,19 +1,17 @@
-// -> Define un objeto llamado `Robot`
-// -> Define un método llamado `new` en `Robot`
-// -> Cuando llamamos a `Robot.new()` debe retornar un objeto nuevo con Robot
-//    como prototipo
-//    Por ejemplo: var robby = Robot.new();
-//    `Robot` debe ser el prototipo de `robby`
+// -> Define an object called 'Robot'
+// -> Define a method called 'new' in Robot
+// -> When Robot.new is called it should return a new object with Robot as its prototype 
+//    e.g. var robby = Robot.new();
+//    Robot should be the prototype of robby
 
 var Robot = {
-  new: () => Object.create(Robot)
+	new: function () {
+		return Object.create(this);
+	}
 };
 
-var robby = Robot.new();
-
-
 // ------------------------------------------------
-// Exports de Common JS para verificación, no modificar
+// Common JS exports for verification, don't modify
 module.exports = {
-  Robot: Robot
+	Robot: Robot
 }
